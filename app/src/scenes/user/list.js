@@ -10,7 +10,7 @@ const NewList = () => {
   const [users, setUsers] = useState(null);
   const [projects, setProjects] = useState([]);
   const [usersFiltered, setUsersFiltered] = useState(null);
-  const [filter, setFilter] = useState({ status: "active", availability: "", search: "" });
+  const [filter, setFilter] = useState({ status: "", availability: "", search: "" });
 
   useEffect(() => {
     (async () => {
@@ -128,7 +128,7 @@ const Create = () => {
                     <div className="flex justify-between flex-wrap">
                       <div className="w-full md:w-[48%] mt-2">
                         <div className="text-[14px] text-[#212325] font-medium	">Name</div>
-                        <input className="projectsInput text-[14px] font-normal text-[#212325] rounded-[10px]" name="username" value={values.username} onChange={handleChange} />
+                        <input className="projectsInput text-[14px] font-normal text-[#212325] rounded-[10px]" name="name" value={values.name} onChange={handleChange} />
                       </div>
                       <div className="w-full md:w-[48%] mt-2">
                         <div className="text-[14px] text-[#212325] font-medium	">Email</div>
